@@ -1,6 +1,85 @@
 .App {
   text-align: center;
   background-color: white;
+  min-height: 100vh;
+
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.movie-img {
+  max-width: 50px;
+  max-height: 60px;
+}
+
+
+
+.nominations-component {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 40%;
+  border: 1px solid red;
+  align-items: center;
+
+
+}
+
+.search-component {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 40%;
+  border: 1px solid blue;
+  align-items: center;
+
+
+
+}
+
+.search-results {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid orangered;
+  margin: 50px;
+
+
+}
+
+.nominations-results {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid purple;
+  margin: 50px;
+
+
+}
+
+.nomination-list-item {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid green;
+  align-items: center;
+
+}
+
+
+
+.movie-list-item {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  align-items: center;
 }
 
 .App-logo {
@@ -15,14 +94,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {

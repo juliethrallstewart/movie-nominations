@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### TO DO 
+
+- Banner displayes when 5 nominations reached
+- delete
+- when a nomination is deleted it becomes available in the search list again
+- when a nomination is deleted it automatically is removed from the nominations list
+- nomination button needs to toggle to gray in search list if item is already nominated
+- set nomination choice in local storage

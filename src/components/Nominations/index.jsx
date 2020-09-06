@@ -20,7 +20,7 @@ const NominationsComponent = () => {
         axios.get(apiTitle)
         .then(res => {
             console.log(res.data, "RES");
-            localStorage.setItem('plot', res.data);
+            localStorage.setItem('movie-info', res.data);
             setPlot(res.data)
 
         })
@@ -46,9 +46,9 @@ const NominationsComponent = () => {
                     <p>{item.Year}</p>
                         <div className='nominate-button'>
                         {/* need to delete */}
-                            <button onClick={(e) => handleDeleteSubmit(e,item)}>Delete</button>
+                            <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Delete</button>
                             {/* /*need to toggle plot button*/}
-                            <button onClick={(e) => handlePlotSubmit(e,item.Title)}>Plot</button>
+                            <button onClick={(e) => handlePlotSubmit(e,item.Title)} className="movie-into-btn">Synopsis</button>
                         </div>
                     </div>
         

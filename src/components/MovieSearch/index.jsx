@@ -28,6 +28,9 @@ const MovieSearchComponent = () => {
 
     const handleNominationSubmit = (e, item) => {
         e.preventDefault()
+        item.nominated = true
+        console.log(item, "ITEM IN HANDLER")
+
         setNomination([...nominations, item])
     }
 
@@ -49,14 +52,18 @@ const MovieSearchComponent = () => {
                 </form>
                 <div className='search-results'>
                     { searchResults ? searchResults.map(item => {
-                    return  <div className="movie-list-item" key={item.imdbID}>
-                    <img className="movie-img" src={item.Poster} alt="{item.Title}" />
-                    <h4>{item.Title}</h4>
-                    <p>{item.Year}</p>
-                        <div className='nominate-button'>
-                        <button onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
+                        // if ([...nominations].includes(item.Title)) {item.nominated = true} else {item.nominated = false}
+                        for (let i of nominations) {if (i.Title === item.Title) {item.nominated = true} else {item.nominated = false}}
+                        console.log(nominations, "NOMINATIONS INTO SEARCH THING")
+                        return  <div className="movie-list-item" key={item.imdbID}>
+                        <img className="movie-img" src={item.Poster} alt="{item.Title}" />
+                        <h4>{item.Title}</h4>
+                        <p>{item.Year}</p>
+                            <div className={!item.nominated ? 'nominate-button' : 'nominate-button nominated-true'}>
+                            <button onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
+                            </div>
+                            {console.log(item, "ITEM")}
                         </div>
-                    </div>
         
                 }) : console.log("loading")
 

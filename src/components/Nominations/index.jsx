@@ -5,7 +5,7 @@ import NominationsContext from '../../contexts/NominationsContext'
 const NominationsComponent = () => {
 
     const {searchResults, setResults, searchTerms, setSearchTerms, nominations, setNomination, 
-          apiTitle, apiSearch, details, setDetails} = useContext(NominationsContext)
+          apiTitle, apiSearch, details, setDetails, setCounter, counter} = useContext(NominationsContext)
 
     const nominationsRef = useRef(nominations)
     nominationsRef.current = nominations
@@ -26,6 +26,8 @@ const NominationsComponent = () => {
         e.preventDefault()
         delete movie.nominated 
         setNomination(nominations.filter(i => i.Title !== movie.Title))
+        setCounter(counter - 1)
+
             
     }
 

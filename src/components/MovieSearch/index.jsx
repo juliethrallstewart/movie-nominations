@@ -5,7 +5,7 @@ import NominationsContext from '../../contexts/NominationsContext'
 const MovieSearchComponent = () => {
 
     const {searchResults, setResults, searchTerms,setSearchTerms, nominations, setNomination, 
-          apiSearch} = useContext(NominationsContext)
+          apiSearch, setCounter, counter} = useContext(NominationsContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -33,6 +33,7 @@ const MovieSearchComponent = () => {
         e.stopPropagation()        
         item.nominated = true
         setNomination([...nominations, item])
+        setCounter(counter + 1)
     }
 
     const searchResultsRef = useRef(searchResults)

@@ -11,7 +11,7 @@ const NominationsComponent = () => {
 
     const handleMovieDetailSubmit = (e, movie) => {
         e.preventDefault()
-        axios.get(`http://www.omdbapi.com/?t=${movie}&plot=full&apikey=${apiKey}`
+        axios.get(`https://www.omdbapi.com/?t=${movie}&plot=full&apikey=${apiKey}`
         )
         .then(res => {
             console.log(res.data, "RES");

@@ -22,7 +22,7 @@ function App() {
   const [loading, setLoading] = useState(false)
 
   const apiKey = `f54db668`
-  const apiSearch = `http://www.omdbapi.com/?s=${searchTerms}&type=movie&apikey=${apiKey}`
+  const apiSearch = `https://www.omdbapi.com/?s=${searchTerms}&type=movie&apikey=${apiKey}`
 
   useEffect(
 		() => {

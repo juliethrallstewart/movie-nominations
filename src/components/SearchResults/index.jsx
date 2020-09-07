@@ -39,7 +39,7 @@ searchResultsRef.current = searchResults
                     <ul>
                     <li>{item.Title} ({item.Year})</li>
                         <li className="button-line-item"><div className='nominate-button'>
-                        <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate" }</button>
+                        <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
                         </div></li>
                     </ul>
                     </div>

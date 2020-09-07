@@ -82,6 +82,14 @@
   align-items: center;
 }
 
+.banner-box-hidden {
+  display: none
+}
+
+.banner-box {
+  display: block
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

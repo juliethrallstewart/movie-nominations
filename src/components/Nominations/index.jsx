@@ -43,7 +43,7 @@ const NominationsComponent = () => {
             setResults(results)
         })
         .catch(err => console.log(err))
-    }, [nominations])
+    }, [nominations, apiSearch, setResults])
   
     return (
         <>

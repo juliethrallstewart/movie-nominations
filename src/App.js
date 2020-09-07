@@ -2,6 +2,7 @@ import React, {useEffect, useState, useContext} from 'react';
 import axios from 'axios'
 import logo from './logo.svg';
 import './App.css';
+import './scss/index.scss';
 import NominationsContext from '../src/contexts/NominationsContext'
 import MovieSearchComponent from '../src/components/MovieSearch'
 import NominationsComponent from '../src/components/Nominations'

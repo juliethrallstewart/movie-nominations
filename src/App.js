@@ -11,8 +11,7 @@ function App() {
   
   const [searchTerms, setSearchTerms] = useState("")
 
-  // const [searchResults, setResults] = useState(() => (localStorage.searchResults ? JSON.parse(localStorage.searchResults) : []))
-  const [searchResults, setResults] = useState([])
+  const [searchResults, setResults] = useState(() => (localStorage.searchResults ? JSON.parse(localStorage.searchResults) : []))
 
   const [nominations, setNomination] = useState(() => (localStorage.nominations ? JSON.parse(localStorage.nominations) : []))
 
@@ -29,18 +28,13 @@ function App() {
 		[ nominations ]
   );
   
-  // useEffect(
-  //   () => {
-  //     searchResults && localStorage.setItem('searchResults', JSON.stringify(searchResults));
-  //   },
-  //   [ searchResults ]
-  // );
   useEffect(
     () => {
-    setResults(searchResults);
+      searchResults && localStorage.setItem('searchResults', JSON.stringify(searchResults));
     },
-    [ searchResults, setResults ]
-);
+    [ searchResults ]
+  );
+
 
   return (
     <NominationsContext.Provider value={{searchResults, setResults, searchTerms, 

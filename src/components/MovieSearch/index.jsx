@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
 
@@ -12,59 +12,31 @@ const MovieSearchComponent = () => {
         axios.get(apiSearch)
         .then(res => {
             let results = res.data['Search']
-            for (let i of results) {
+            for (let i in results) {
                 for (let y of nominations) {
-                    if (i.Title === y.Title) {
-                        i.nominated = true
+                    if (results[i].Title === y.Title) {
+                        results[i].nominated = true
                     } 
                 }
             }
-            console.log(results, "RESULTS IN HANDLE SUBMIT")
             setResults(results)
         })
-        .catch(err => console.log("no results match query"))
+        .catch(err => console.log(err))
         }
 
     const handleChange = e => {
         setSearchTerms(e.target.value);
     };
 
-    // console.log(searchResults, "SEARCH RESULTS")
-
-
     const handleNominationSubmit = (e, item) => {
         e.preventDefault()
         e.stopPropagation()        
         item.nominated = true
         setNomination([...nominations, item])
-
-        // console.log(searchResults, "SEARCH RESULTS")
     }
 
-    // console.log(nominations, "NOMINATIONS")
     const searchResultsRef = useRef(searchResults)
     searchResultsRef.current = searchResults
-
-    useEffect(
-        () => {
-            nominations && localStorage.setItem('nominations', JSON.stringify(nominations));
-        },
-        [ nominations ]
-    );
-
-    // useEffect(
-    //     () => {
-    //     searchResults && localStorage.setItem('searchResults', JSON.stringify(searchResults));
-    //     },
-    //     [ searchResults, setResults ]
-    // );
-
-    useEffect(
-        () => {
-        setResults(searchResults);
-        },
-        [ searchResults, setResults ]
-    );
   
     return (
         <>

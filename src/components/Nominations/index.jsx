@@ -1,18 +1,15 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
+import { setState } from "expect/build/jestMatchersObject";
 
 const NominationsComponent = () => {
 
     const {searchResults, setResults, searchTerms,setSearchTerms, nominations, setNomination, 
           apiKey, apiTitle, apiSearch, plot, setPlot} = useContext(NominationsContext)
 
-    
-
-    // useEffect = (() => {
-
-    // }, [nominations])
     const nominationsRef = useRef(nominations)
+    nominationsRef.current = nominations
 
     const handlePlotSubmit = (e, movie) => {
         e.preventDefault()
@@ -29,23 +26,29 @@ const NominationsComponent = () => {
 
     const handleDeleteSubmit = (e, movie) => {
         e.preventDefault()
-        delete nominations.movie
-        console.log(nominations, "NOM NOM NOM")
+        movie.nominated = false
+        setNomination(nominations.filter(i => i.Title !== movie.Title))
+        
+        // console.log(nominations, "NOM NOM NOM")
+    
     }
-      
+
+    useEffect(() => {
+        setNomination(nominations)
+    }, [setNomination, nominations])
 
     return (
         <>
             <div className="nominations-component">
                 <h2>Nominations</h2>
                 <div className='nominations-results'>
-                    { nominationsRef ? nominations.map(item => {
-                    return  <div className="movie-list-item" key={item.imdbID}>
+                    { nominationsRef.current ? nominationsRef.current.map(item => {
+                    return  <div className="nomination-list-item" key={item.imdbID}>
                     <img src={item.Poster} alt="{item.Title}" />
                     <h4>{item.Title}</h4>
                     <p>{item.Year}</p>
-                        <div className='nominate-button'>
-                        {/* need to delete */}
+                        <div className='remove-button'>
+                        {/* need to remove */}
                             <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
                             {/* /*need to toggle plot button*/}
                             <button onClick={(e) => handlePlotSubmit(e,item.Title)} className="movie-into-btn">Synopsis</button>

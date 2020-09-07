@@ -1,11 +1,10 @@
-import React, {useEffect, useState, useContext} from 'react'
-import axios from 'axios'
-import logo from './logo.svg'
+import React, {useEffect, useState, useRef, useContext} from 'react'
 import './App.css'
 import './scss/index.scss'
 import NominationsContext from '../src/contexts/NominationsContext'
 import MovieSearchComponent from '../src/components/MovieSearch'
 import NominationsComponent from '../src/components/Nominations'
+import SearchResultsComponent from '../src/components/SearchResults'
 import Banner from '../src/components/Banner'
 
 function App() {
@@ -18,10 +17,11 @@ function App() {
 
   const [counter, setCounter] = useState(() => (localStorage.counter ? JSON.parse(localStorage.counter) : 0))
 
-  const [details, setDetails] = useState()
+  const [details, setDetails] = useState([])
+
+  const [loading, setLoading] = useState(false)
 
   const apiKey = `f54db668`
-  const apiTitle = `http://www.omdbapi.com/?t=${searchTerms}&plot=full&apikey=${apiKey}`
   const apiSearch = `http://www.omdbapi.com/?s=${searchTerms}&type=movie&apikey=${apiKey}`
 
   useEffect(
@@ -45,23 +45,31 @@ function App() {
     [ counter ]
   );
 
-    console.log(counter, "count")
- 
+  useEffect(
+    () => {
+      setDetails(details)
+    },
+    [ details ]
+  );
 
   return (
     <NominationsContext.Provider value={{searchResults, setResults, searchTerms, 
-    setSearchTerms, nominations, setNomination, apiKey, apiTitle, apiSearch, details, setDetails, counter, setCounter}}>
+    setSearchTerms, nominations, setNomination, apiKey, apiSearch, details, setDetails, counter, setCounter, loading, setLoading,
+    }}>
     <div className="App">
       <header className="App-header">
       <Banner />
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Nominate your 5 favorite movies and share with friends!
         </p>
       </header>
       <div className="body">
         <MovieSearchComponent />
+        <div className="body-results">
+        <SearchResultsComponent />
         <NominationsComponent />
+        </div>
       </div>
     </div>
     </NominationsContext.Provider>

@@ -52,7 +52,6 @@ const MovieSearchComponent = () => {
                 </form>
                 <div className='search-results'>
                     { searchResults ? searchResults.map(item => {
-                        // if ([...nominations].includes(item.Title)) {item.nominated = true} else {item.nominated = false}
                         for (let i of nominations) {if (i.Title === item.Title) {item.nominated = true} else {item.nominated = false}}
                         console.log(nominations, "NOMINATIONS INTO SEARCH THING")
                         return  <div className="movie-list-item" key={item.imdbID}>
@@ -60,7 +59,7 @@ const MovieSearchComponent = () => {
                         <h4>{item.Title}</h4>
                         <p>{item.Year}</p>
                             <div className={!item.nominated ? 'nominate-button' : 'nominate-button nominated-true'}>
-                            <button onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
+                            <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
                             </div>
                             {console.log(item, "ITEM")}
                         </div>

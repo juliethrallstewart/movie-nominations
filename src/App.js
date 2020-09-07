@@ -27,7 +27,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Nominate your favorite movies and share with friends!
+          Nominate your 5 favorite movies and share with friends!
         </p>
       </header>
       <div className="body">

@@ -46,7 +46,7 @@ const NominationsComponent = () => {
                     <p>{item.Year}</p>
                         <div className='nominate-button'>
                         {/* need to delete */}
-                            <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Delete</button>
+                            <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
                             {/* /*need to toggle plot button*/}
                             <button onClick={(e) => handlePlotSubmit(e,item.Title)} className="movie-into-btn">Synopsis</button>
                         </div>

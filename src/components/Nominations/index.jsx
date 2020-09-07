@@ -4,19 +4,19 @@ import NominationsContext from '../../contexts/NominationsContext'
 
 const NominationsComponent = () => {
 
-    const {searchResults, setResults, searchTerms, setSearchTerms, nominations, setNomination, 
-          apiTitle, apiSearch, details, setDetails, setCounter, counter} = useContext(NominationsContext)
+    const {setResults, nominations, setNomination, apiKey, apiSearch, details, setDetails, setCounter, counter} = useContext(NominationsContext)
 
     const nominationsRef = useRef(nominations)
     nominationsRef.current = nominations
 
     const handleMovieDetailSubmit = (e, movie) => {
         e.preventDefault()
-        setSearchTerms(movie)
-        axios.get(apiTitle)
+        axios.get(`http://www.omdbapi.com/?t=${movie}&plot=full&apikey=${apiKey}`
+        )
         .then(res => {
             console.log(res.data, "RES");
-            setDetails(res.data)
+            setDetails([...details, res.data])
+            
 
         })
         .catch(err => console.log(err))
@@ -26,9 +26,7 @@ const NominationsComponent = () => {
         e.preventDefault()
         delete movie.nominated 
         setNomination(nominations.filter(i => i.Title !== movie.Title))
-        setCounter(counter - 1)
-
-            
+        setCounter(counter - 1)       
     }
 
     useEffect(() => {
@@ -49,25 +47,26 @@ const NominationsComponent = () => {
   
     return (
         <>
-            <div className="nominations-component">
+            <div className="nominations-results-component">
                 <h2>Nominations</h2>
-                <div className='nominations-results'>
-                    { nominations ? nominations.map(item => {
-                    return  <div className="nomination-list-item" key={item.imdbID}>
-                    <img src={item.Poster} alt="{item.Title}" />
-                    <h4>{item.Title}</h4>
-                    <p>{item.Year}</p>
-                        <div className='remove-button'>
-                            <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
-                            {/* /*need to toggle plot button*/}
-                            <button onClick={(e) => handleMovieDetailSubmit(e,item.Title)} className="movie-into-btn">Details</button>
-                        </div>
+                    { nominations ? nominations.map((item,i) => {
+                    return  <div className="nomination-list-item" key={i}>
+                        <ul>
+                            <li className={"details-card-link"} onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
+                            {/* Complete details card NEXT */}
+                            {/* <div className={details.length > 0 ? "details-card" : "hidden"}>
+                        
+                            </div> */}
+                                <div className='remove-button'>
+                                    <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
+                                </div>
+                        </ul>
                     </div>
         
                 }) : console.log("loading")
 
                 }
-                </div>
+                {/* </div> */}
             </div>
     </>
 

@@ -1,11 +1,14 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner'
+
+
 
 const MovieSearchComponent = () => {
 
-    const {searchResults, setResults, searchTerms,setSearchTerms, nominations, setNomination, 
-          apiSearch, setCounter, counter} = useContext(NominationsContext)
+    const {setResults, searchResults, searchTerms,setSearchTerms, nominations, apiSearch, setLoading} = useContext(NominationsContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -19,7 +22,10 @@ const MovieSearchComponent = () => {
                     } 
                 }
             }
+            setLoading(true)
             setResults(results)
+            setLoading(false)
+
         })
         .catch(err => console.log(err))
         }
@@ -28,21 +34,17 @@ const MovieSearchComponent = () => {
         setSearchTerms(e.target.value);
     };
 
-    const handleNominationSubmit = (e, item) => {
-        e.preventDefault()
-        e.stopPropagation()        
-        item.nominated = true
-        setNomination([...nominations, item])
-        setCounter(counter + 1)
-    }
+    useEffect(
+        () => {
+          searchResults && localStorage.setItem('searchResults', JSON.stringify(searchResults));
+        },
+        [ searchResults ]
+      );
 
-    const searchResultsRef = useRef(searchResults)
-    searchResultsRef.current = searchResults
-  
     return (
         <>
-            <div className="search-component">
-                <h2>Search Movies</h2>
+            <div className="search-input-component">
+                <h2>Search for your favorite Movies</h2>
                 <form onSubmit={handleSubmit}>
                     <input 
                     type="search"
@@ -50,24 +52,10 @@ const MovieSearchComponent = () => {
                     placeholder="search"
                     onChange={handleChange}
                     value={searchTerms}
+                    className = "search-input"
                     ></input>
                     <button>Submit</button>
                 </form>
-                <div className='search-results'>
-                    { searchResultsRef.current ? searchResultsRef.current.map((item,i) => {
-                        return  <div className="movie-list-item" key={i}>
-                        <img className="movie-img" src={item.Poster} alt="{item.Title}" />
-                        <h4>{item.Title}</h4>
-                        <p>{item.Year}</p>
-                             <div className='nominate-button'>
-                            <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate" }</button>
-                            </div>
-                        </div>
-        
-                }) : console.log("loading")
-
-                }
-                </div>
             </div>
     </>
 

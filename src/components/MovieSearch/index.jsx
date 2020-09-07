@@ -1,10 +1,7 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect} from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import Loader from 'react-loader-spinner'
-
-
 
 const MovieSearchComponent = () => {
 

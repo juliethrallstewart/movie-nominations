@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef } from "react";
-import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
@@ -8,7 +7,7 @@ import Loader from 'react-loader-spinner'
 
 const SearchResultsComponent = () => {
 
-    const {searchResults, setResults,nominations, setNomination, setCounter, counter, loading, setLoader} = useContext(NominationsContext)
+    const {searchResults, setResults,nominations, setNomination, setCounter, counter, loading} = useContext(NominationsContext)
 
     const handleNominationSubmit = (e, item) => {
         e.preventDefault()

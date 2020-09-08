@@ -3,6 +3,32 @@
 ## Deployed / Production 
 https://loving-bassi-6b1411.netlify.app/
 
+## Completed Features
+
+### TO DO 
+
+- Banner displayes when max 5 nominations reached.
+- A user can nominate a movie and the movie is added to their list of nominations.
+- When a movie is nominated the nominate button becomes disabled.
+- A user can remove a nominated movie from their list of nominations.
+- When a nomination is removed from the nomination list the nominate button for that movie is enabled again in the search results.
+- A users nomination list persists in local storage.
+
+## In progress Features
+- A user can click on a movie title or info button in their nominated movies list and a movie info card is displayed.
+- Movie info card displays: Movie Poster, Plot, Actors, Director.
+- Mobile view displays Nominations section above the Search Results for improved UI.
+- Update CSS to SCSS.
+- Improved visual design - add image of movie reel.
+
+## Future Features
+- A user can share their nominations with their FB friends.
+- A user can clear all their nominations at once.
+
+## Bugs
+- A user should be unable to make more than 5 nominations.
+- The users last search results are saved in local storage but bug when accessing after leaving website and returning.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -74,11 +100,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 
-### TO DO 
 
-- Banner displayes when 5 nominations reached
-- delete
-- when a nomination is deleted it becomes available in the search list again
-- when a nomination is deleted it automatically is removed from the nominations list
-- nomination button needs to toggle to gray in search list if item is already nominated
-- set nomination choice in local storage

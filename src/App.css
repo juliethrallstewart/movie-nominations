@@ -10,13 +10,22 @@
   box-sizing: border-box
 }
 
-h2 {
+h1, h2 {
   
   color: #404040
 }
 
+h1 {
+  opacity: 87%;
+}
+
+h2 {
+  opacity: 67%;
+}
+
 li {
-  color:#484848
+  color:#484848;
+  opacity: 87%;
 }
 
 .App-header {
@@ -46,14 +55,18 @@ li {
 .search-input {
   width: 50vw;
   height: 4vh;
-  background-color: white;
   border-radius: 5px;
+  border: none;
+
 
 
 }
 
 button {
   height: 4vh;
+  opacity: 87%;
+  color:#484848;
+  margin: 1em;
 }
 
 .body-results {
@@ -114,7 +127,7 @@ button {
   
   }
   .body-results {
-    max-width: 100vw;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; 
@@ -125,7 +138,7 @@ button {
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 100vw;
+    min-width: 100vw;
     height: auto;
     background-color: white;
     border-radius: 5px;
@@ -137,7 +150,7 @@ button {
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 100vw;
+    min-width: 100vw;
     height: auto;
     background-color: white;
     border-radius: 5px;
@@ -232,10 +245,13 @@ button {
 
 li {
   max-width: 60%;
+  
 }
 
 .button-line-item {
-  list-style-type: none
+  list-style-type: none;
+  opacity: 87%;
+
 }
 
 .banner-box-hidden {

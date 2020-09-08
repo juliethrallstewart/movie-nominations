@@ -59,10 +59,9 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Banner />
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
+        <h1 className="headline">
           Nominate your 5 favorite movies and share with friends!
-        </p>
+        </h1>
       </header>
       <div className="body">
         <MovieSearchComponent />

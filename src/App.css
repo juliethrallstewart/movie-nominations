@@ -15,17 +15,17 @@ h1, h2 {
   color: #404040
 }
 
-h1 {
+/* h1 {
   opacity: 87%;
 }
 
 h2 {
   opacity: 67%;
-}
+} */
 
 li {
   color:#484848;
-  opacity: 87%;
+  /* opacity: 87%; */
 }
 
 .App-header {

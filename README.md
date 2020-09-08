@@ -1,6 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8cc2ff0c-2711-4e88-941f-3d2c3fa8c88d/deploy-status)](https://app.netlify.com/sites/loving-bassi-6b1411/deploys)
 
-[Deployed Movie App] (https://loving-bassi-6b1411.netlify.app/)
+## Deployed / Production 
+https://loving-bassi-6b1411.netlify.app/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

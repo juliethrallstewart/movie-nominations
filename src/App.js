@@ -15,7 +15,7 @@ function App() {
 
   const [nominations, setNomination] = useState(() => (localStorage.nominations ? JSON.parse(localStorage.nominations) : []))
 
-  const [counter, setCounter] = useState(() => (localStorage.counter ? JSON.parse(localStorage.counter) : 0))
+  const [counter, setCounter] = useState(() => (localStorage.counter ? JSON.parse(localStorage.counter) : -1))
 
   const [details, setDetails] = useState([])
 

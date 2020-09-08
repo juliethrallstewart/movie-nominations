@@ -25,8 +25,9 @@ const NominationsComponent = () => {
     const handleDeleteSubmit = (e, movie) => {
         e.preventDefault()
         delete movie.nominated 
+        setCounter(counter - 1)
         setNomination(nominations.filter(i => i.Title !== movie.Title))
-        setCounter(counter - 1)       
+               
     }
 
     useEffect(() => {

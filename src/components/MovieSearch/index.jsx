@@ -31,13 +31,6 @@ const MovieSearchComponent = () => {
         setSearchTerms(e.target.value);
     };
 
-    useEffect(
-        () => {
-          searchResults && localStorage.setItem('searchResults', JSON.stringify(searchResults));
-        },
-        [ searchResults ]
-      );
-
     return (
         <>
             <div className="search-input-component">

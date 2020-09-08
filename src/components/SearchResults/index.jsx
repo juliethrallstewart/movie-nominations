@@ -1,40 +1,30 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext } from "react";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import Loader from 'react-loader-spinner'
+// import Loader from 'react-loader-spinner'
 
 
 
 const SearchResultsComponent = () => {
 
-    const {searchResults, setResults,nominations, setNomination, setCounter, counter, loading} = useContext(NominationsContext)
+    const {searchResults, nominations, setNomination, setCounter, counter} = useContext(NominationsContext)
 
+    // Add nominated = true property to movie item
+    // Add movie to nominations list
+    // Increments counter which tracks number of items nominated
     const handleNominationSubmit = (e, item) => {
         e.preventDefault()
-        e.stopPropagation()        
         item.nominated = true
         setNomination([...nominations, item])
         setCounter(counter + 1)
     }
 
-
-const searchResultsRef = useRef(searchResults)
-searchResultsRef.current = searchResults
-
-    useEffect(
-        () => {
-          searchResults && localStorage.setItem('searchResults', JSON.stringify(searchResults));
-        },
-        [ searchResults, setResults ]
-      );
-
     return (
 
             <div className='search-results-component'>
             <h2>Search Results</h2>
-                { searchResultsRef.current ? searchResultsRef.current.map((item,i) => {
+                { searchResults ? searchResults.map((item,i) => {
                     return  <div className="movie-list-item" key={i}>
-                    {/* <img className="movie-img" src={item.Poster} alt="{item.Title}" /> */}
                     <ul>
                     <li>{item.Title} ({item.Year})</li>
                         <li className="button-line-item"><div className='nominate-button'>
@@ -42,9 +32,9 @@ searchResultsRef.current = searchResults
                         </div></li>
                     </ul>
                     </div>
-    
-            }) : 	loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
+    // potential loader : loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
 
+            }) : console.log("LOADING")
             }
         </div>
     )

@@ -1,11 +1,11 @@
-import React, { useContext, useEffect} from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const MovieSearchComponent = () => {
 
-    const {setResults, searchResults, searchTerms,setSearchTerms, nominations, apiSearch, setLoading} = useContext(NominationsContext)
+    const {setResults, searchTerms,setSearchTerms, nominations, apiSearch, setLoading} = useContext(NominationsContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()

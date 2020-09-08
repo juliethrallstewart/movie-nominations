@@ -14,7 +14,7 @@ https://loving-bassi-6b1411.netlify.app/
 - When a nomination is removed from the nomination list the nominate button for that movie is enabled again in the search results.
 - A users nomination list persists in local storage.
 
-## In progress Features
+## In Progress Features
 - A user can click on a movie title or info button in their nominated movies list and a movie info card is displayed.
 - Movie info card displays: Movie Poster, Plot, Actors, Director.
 - Mobile view displays Nominations section above the Search Results for improved UI.

@@ -5,8 +5,6 @@ https://loving-bassi-6b1411.netlify.app/
 
 ## Completed Features
 
-### TO DO 
-
 - Banner displayes when max 5 nominations reached.
 - A user can nominate a movie and the movie is added to their list of nominations.
 - When a movie is nominated the nominate button becomes disabled.

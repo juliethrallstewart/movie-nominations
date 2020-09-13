@@ -6,6 +6,8 @@ import MovieSearchComponent from '../src/components/MovieSearch'
 import NominationsComponent from '../src/components/Nominations'
 import SearchResultsComponent from '../src/components/SearchResults'
 import Banner from '../src/components/Banner'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 
 function App() {
   
@@ -57,12 +59,9 @@ function App() {
     setSearchTerms, nominations, setNomination, apiKey, apiSearch, details, setDetails, counter, setCounter, loading, setLoading,
     }}>
     <div className="App">
-      <header className="App-header">
+
       <Banner />
-        <h1 className="headline">
-          Nominate your 5 favorite movies and share with friends!
-        </h1>
-      </header>
+      <Header />
       <div className="body">
         <MovieSearchComponent />
         <div className="body-results">
@@ -70,6 +69,7 @@ function App() {
         <NominationsComponent />
         </div>
       </div>
+      <Footer />
     </div>
     </NominationsContext.Provider>
   );

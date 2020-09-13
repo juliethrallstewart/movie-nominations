@@ -52,10 +52,12 @@ const NominationsComponent = () => {
   
     return (
         <>
-            <div className="nominations-results-component">
-                <h2>Nominations</h2>
+            <div className="results-component">
+                <div className="results-header">
+                    <h2>Nominations</h2>
+                </div>
                     { nominations ? nominations.map((item,i) => {
-                    return  <div className="nomination-list-item" key={i}>
+                    return  <div className="list-item" key={i}>
                                 <ul>
                                     <li className={"details-card-link"} onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
                                     {/* Complete details card IN PROGRESS */}

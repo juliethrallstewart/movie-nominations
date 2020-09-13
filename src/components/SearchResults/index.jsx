@@ -21,16 +21,18 @@ const SearchResultsComponent = () => {
 
     return (
 
-            <div className='search-results-component'>
-            <h2>Search Results</h2>
-                { searchResults ? searchResults.map((item,i) => {
-                    return  <div className="movie-list-item" key={i}>
-                    <ul>
-                    <li>{item.Title} ({item.Year})</li>
-                        <li className="button-line-item"><div className='nominate-button'>
-                        <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
-                        </div></li>
-                    </ul>
+            <div className='results-component search'>
+                <div className="results-header">
+                    <h2>Search Results</h2>
+                </div>
+                    { searchResults ? searchResults.map((item,i) => {
+                        return  <div className="list-item" key={i}>
+                        <ul>
+                        <li>{item.Title} ({item.Year})</li>
+                            <li className="button-line-item"><div className='nominate-button'>
+                            <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>Nominate</button>
+                            </div></li>
+                        </ul>
                     </div>
     // potential loader : loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
 

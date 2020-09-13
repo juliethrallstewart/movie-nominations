@@ -34,7 +34,7 @@ const MovieSearchComponent = () => {
     return (
         <>
             <div className="search-input-component">
-                <h2>Search for your favorite Movies</h2>
+                {/* <h2>Search for your favorite Movies</h2> */}
                 <form onSubmit={handleSubmit}>
                     <input 
                     type="search"

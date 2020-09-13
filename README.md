@@ -30,6 +30,11 @@ https://loving-bassi-6b1411.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Photo Credits
+
+      {/* <p><span>Photo by <a href="https://unsplash.com/@kobayashi_issa?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Isabel A Hermosillo</a> on <a href="https://unsplash.com/s/photos/movie-reel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p> */}
+      {/* <p><span>Photo by <a href="https://unsplash.com/@myke_simon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Myke Simon</a> on <a href="https://unsplash.com/s/photos/movie-reel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p> */}
+
 ## Available Scripts
 
 In the project directory, you can run:

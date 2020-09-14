@@ -157,6 +157,8 @@ button:disabled {
 .close-button {
   border: none;
   background-color: white;
+  min-width: 0%;
+  margin-right: 10px;
 }
 
 .banner-message {

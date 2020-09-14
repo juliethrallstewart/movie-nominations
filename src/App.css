@@ -118,7 +118,7 @@ button {
   max-height: 60vh;
 }
 
-.banner-box {
+/* .banner-box {
   display: block;
   z-index: 5;
   position: absolute;
@@ -152,7 +152,7 @@ button {
   flex-direction: column;
   margin: 20px;
  
-}
+} */
 
 @media screen and (max-width: 768px) { 
 
@@ -278,6 +278,42 @@ li {
 
 .button-line-item {
   list-style-type: none;
+}
+
+.banner-box {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 2vh;
+  margin-left: -25vw;
+  min-width: 50vw;
+  min-height:40vh;
+  background-color: white;
+  margin: 0, auto;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px -5px #484848;
+}
+
+.close-button-box {
+  min-width: 50vw;
+  max-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.close-button {
+  border: none;
+  background-color: white;
+}
+
+.banner-message {
+  display:flex;
+  flex-direction: column;
+  margin: 20px;
+ 
 }
 
 .App-footer {

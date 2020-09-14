@@ -22,11 +22,13 @@ const SearchResultsComponent = () => {
     }
 
     return (
-
+        <>
             <div className='results-component search'>
                 <div className="results-header">
                     <h2>Search Results</h2>
                 </div>
+                <div className="results-box">
+
                     { searchResults ? searchResults.map((item,i) => {
                         return  <div className="list-item" key={i}>
                         <ul>
@@ -40,7 +42,9 @@ const SearchResultsComponent = () => {
 
             }) : console.log("LOADING")
             }
-        </div>
+                </div>
+            </div>
+        </>
     )
 }
 

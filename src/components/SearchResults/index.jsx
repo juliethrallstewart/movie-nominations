@@ -14,10 +14,10 @@ const SearchResultsComponent = () => {
     // Increments counter which tracks number of items nominated
     const handleNominationSubmit = (e, item) => {
         e.preventDefault()
-        item.nominated = true
-        setNomination([...nominations, item])
-        if (counter < 5) {
+        if (nominations.length < 6) {
+            item.nominated = true
             setCounter(counter + 1)
+            setNomination([...nominations, item])
         }
     }
 

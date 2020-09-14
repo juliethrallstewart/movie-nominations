@@ -204,16 +204,18 @@ li {
 .banner-box {
   display: flex;
   flex-direction: column;
-  margin: 0, auto;
+  margin-top: 25px;
+  margin-bottom: -15px;
   height: 15vh;
-  min-width: 100vw;
   background-color: white;
 }
 
 .banner-box>h3 {
   display: flex;
   justify-content: center;
-  margin-bottom: -15px;
+  align-content: center;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 .App-footer {

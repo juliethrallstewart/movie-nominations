@@ -16,7 +16,9 @@ const SearchResultsComponent = () => {
         e.preventDefault()
         item.nominated = true
         setNomination([...nominations, item])
-        setCounter(counter + 1)
+        if (counter < 5) {
+            setCounter(counter + 1)
+        }
     }
 
     return (

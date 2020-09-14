@@ -9,7 +9,7 @@ const Header = () => {
             </div>
             <div className="headline">
                 <h1> The Shoppies</h1>
-                <h3>Pick your top 5 Shoppies Nominations and share with friends!
+                <h3>Pick your top 5 Shoppies nominations and share with friends!
                 </h3>
             </div>
         </div>

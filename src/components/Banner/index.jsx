@@ -3,13 +3,13 @@ import NominationsContext from '../../contexts/NominationsContext'
 
 
 const Banner = () => {
-    const {counter, nominations, setNomination} = useContext(NominationsContext)
+    const {counter} = useContext(NominationsContext)
 
-    useEffect(() => {
-        if (nominations.length === 6) {
-            setNomination(nominations.slice(0,5))
-        } 
-    }, [nominations, setNomination])
+    // useEffect(() => {
+    //     if (nominations.length === 6) {
+    //         setNomination(nominations.slice(0,5))
+    //     } 
+    // }, [nominations, setNomination])
 
     return ( 
         <div className={counter > 4 ? "banner-box" : "hidden"}>

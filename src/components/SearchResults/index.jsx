@@ -7,7 +7,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const SearchResultsComponent = () => {
 
-    const {searchResults, nominations, setNomination, setCounter, counter} = useContext(NominationsContext)
+    const {searchResults, nominations, setNomination, setCounter, counter,
+         bannerStatus, setBannerStatus} = useContext(NominationsContext)
 
     // Add nominated = true property to movie item
     // Add movie to nominations list
@@ -18,7 +19,10 @@ const SearchResultsComponent = () => {
             item.nominated = true
             setCounter(counter + 1)
             setNomination([...nominations, item])
+        } else {
+            setBannerStatus(!bannerStatus)
         }
+        
     }
 
     return (

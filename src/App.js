@@ -21,6 +21,9 @@ function App() {
 
   const [details, setDetails] = useState([])
 
+  const [bannerStatus, setBannerStatus] = useState(false)
+
+
   const [loading, setLoading] = useState(false)
 
   const apiKey = `f54db668`
@@ -56,7 +59,8 @@ function App() {
 
   return (
     <NominationsContext.Provider value={{searchResults, setResults, searchTerms, 
-    setSearchTerms, nominations, setNomination, apiKey, apiSearch, details, setDetails, counter, setCounter, loading, setLoading,
+    setSearchTerms, nominations, setNomination, apiKey, apiSearch, details, setDetails, 
+    counter, setCounter, loading, setLoading, bannerStatus, setBannerStatus
     }}>
     <div className="App">
 

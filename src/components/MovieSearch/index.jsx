@@ -44,7 +44,7 @@ const MovieSearchComponent = () => {
                     value={searchTerms}
                     className = "search-input"
                     ></input>
-                    <button>Submit</button>
+                    <button className="submit-btn">Submit</button>
                 </form>
             </div>
     </>

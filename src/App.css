@@ -80,9 +80,23 @@ li {
 button {
   height: 4vh;
   color:#484848;
-  margin: 1em;
+  margin: .5em;
   border: 1px solid lightgray;
   border-radius: 5px;
+  min-width: 90%;
+}
+
+button:hover:enabled {
+  background-color: lightgray;
+}
+
+button:disabled {
+  color: lightgray;
+}
+
+.submit-btn {
+  min-width: 0%;
+  padding: 0 10px;
 }
 
 .body-results {
@@ -143,6 +157,8 @@ button {
 .close-button {
   border: none;
   background-color: white;
+  min-width: 0%;
+  margin-right: 10px;
 }
 
 .banner-message {
@@ -168,6 +184,21 @@ button {
     flex-direction: column;
   }
 
+  .submit-btn {
+    min-width: 95vw;
+    padding: 0px;
+  }
+
+  .search-input {
+    width: 95vw;  
+  }
+
+  .search-input-component {
+    padding-top: .5em;
+    border: 1px solid black;
+
+  }
+
   .img-header {
     min-width: 100vw;
   }
@@ -191,7 +222,7 @@ button {
   .banner-box {
     margin-left: -25vw;
   }
-  
+
   .banner-message {
     border: 1px solid lightgray;
   }
@@ -212,7 +243,7 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
   width: 45vw;
-  height: 65vh;
+  height: 60vh;
   margin: 20px;
   background-color: white;
   border-radius: 5px;

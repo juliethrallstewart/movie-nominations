@@ -150,6 +150,10 @@ button {
     min-width: 90vw;
   }
 
+  .results-header {
+    min-width: 90vw;
+  }
+
 }
 
 .search-input-component {
@@ -176,11 +180,19 @@ button {
   flex-wrap: nowrap;
   overflow: auto;
   scroll-behavior: smooth;
-
 }
 
 .results-header {
-  border-bottom: 1px solid lightgray;
+  border: 1px solid lightgray;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  text-align: center;
+  width: 45vw;
+}
+
+.results-box {
+  margin-top: 75px;
 }
 
 .list-item ul{

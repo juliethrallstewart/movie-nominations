@@ -52,10 +52,12 @@ const NominationsComponent = () => {
   
     return (
         <>
+
             <div className="results-component">
                 <div className="results-header">
                     <h2>Nominations</h2>
                 </div>
+                <div className="results-box">
                     { nominations ? nominations.map((item,i) => {
                     return  <div className="list-item" key={i}>
                                 <ul>
@@ -73,6 +75,7 @@ const NominationsComponent = () => {
                         }) : console.log("loading")
 
                     }
+                </div>
             </div>
     </>
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&display=swap');
 .App {
   text-align: center;
   min-height: 100vh;
@@ -10,7 +12,14 @@
 }
 
 h1 {
-    color: black;
+  color: #eff0f2;
+  font-family: 'Courgette', cursive;
+  /* font-family: 'Great Vibes', cursive; */
+
+}
+
+h2, a, li, p, button {
+  font-family: 'Courgette', cursive;
 }
 
 a {
@@ -41,7 +50,9 @@ li {
 .headline {
   max-width: 50vw;
   border: 1px solid black;
-  color: #eff0f2
+  color: #eff0f2;
+  /* font-family: 'Great Vibes', cursive; */
+  font-family: 'Courgette', cursive;
 }
 
 .body {
@@ -58,6 +69,8 @@ li {
   height: 4vh;
   border-radius: 5px;
   border: 1px solid lightgray;
+  font-family: 'Courgette', cursive;
+
 }
 
 button {

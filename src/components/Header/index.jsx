@@ -8,7 +8,8 @@ const Header = () => {
                 <img src={movieReel} alt="movie reel" className="reel-img"/>
             </div>
             <div className="headline">
-                <h3>Pick your top 5 Oscar Nominations and share with friends!
+                <h1> The Shoppies</h1>
+                <h3>Pick your top 5 Shoppies nominations and share with friends!
                 </h3>
             </div>
         </div>

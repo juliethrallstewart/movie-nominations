@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -11,20 +13,43 @@
   box-sizing: border-box
 }
 
-h1, h3 {
+h1 {
   color: #eff0f2;
-  font-family: 'Courgette', cursive;
+  /* font-family: 'Courgette', cursive; */
   /* font-family: 'Great Vibes', cursive; */
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+
+
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #eff0f2;
+  font-weight: normal;
+  /* font-size: 1em; */
 }
 
 .banner-font {
   color: #353839;
-  font-family: 'Courgette', cursive;
+  /* font-family: 'Courgette', cursive; */
+  font-family: 'Roboto', sans-serif;
+
 }
 
-h2, a, li, p, button {
-  font-family: 'Courgette', cursive;
+h3 {
+  /* font-family: 'Courgette', cursive; */
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #353839;
+
 }
+
+a, li, p, button {
+  /* font-family: 'Courgette', cursive; */
+  font-family: 'Roboto', sans-serif;
+}
+
 
 a {
   color: white;
@@ -34,9 +59,16 @@ li {
   color:#484848;
 }
 
+.logo-text {
+  display: flex;
+  min-width: 90vw;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
 .App-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   min-width: 100vw;
@@ -53,10 +85,6 @@ li {
 
 .headline {
   max-width: 50vw;
-  border: 1px solid black;
-  color: #eff0f2;
-  /* font-family: 'Great Vibes', cursive; */
-  font-family: 'Courgette', cursive;
 }
 
 .body {
@@ -73,7 +101,8 @@ li {
   height: 4vh;
   border-radius: 5px;
   border: 1px solid lightgray;
-  font-family: 'Courgette', cursive;
+  /* font-family: 'Courgette', cursive; */
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -84,6 +113,7 @@ button {
   border: 1px solid lightgray;
   border-radius: 5px;
   min-width: 90%;
+  font-size: 1em;
 }
 
 button:hover:enabled {
@@ -135,10 +165,26 @@ button:disabled {
   margin: 5px;
   min-height: 100%;
   min-width: 90%;
+  text-align: left;
 }
 
-.movie-poster {
-  max-width: 50%;
+.details-box h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #353839;
+  text-transform: uppercase;
+
+}
+
+.details-box p span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.movie-poster-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .hidden {
@@ -177,12 +223,15 @@ button:disabled {
   background-color: white;
   min-width: 0%;
   margin-right: 10px;
+  font-size: 1.5em;
 }
 
 .banner-message {
   display:flex;
   flex-direction: column;
   margin: 20px;
+  border: 1px solid lightgray;
+
  
 }
 
@@ -208,13 +257,13 @@ button:disabled {
   }
 
   .search-input {
-    width: 95vw;  
+    width: 95vw;
+    font-size: 16px; 
   }
 
   .search-input-component {
     padding-top: .5em;
     border: 1px solid black;
-
   }
 
   .img-header {
@@ -296,6 +345,8 @@ button:disabled {
   background-color: white;
   text-align: center;
   width: 45vw;
+  color: #353839;
+
 }
 
 .results-box {
@@ -324,10 +375,11 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1em auto;
   height: 20vh;
   max-width: 100vw;
   background-color: #130d0d;
-  color: gray
+  color: white;
 }
 
 .App-logo {

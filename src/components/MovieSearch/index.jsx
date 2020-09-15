@@ -34,15 +34,14 @@ const MovieSearchComponent = () => {
     return (
         <>
             <div className="search-input-component">
-                {/* <h2>Search for your favorite Movies</h2> */}
                 <form onSubmit={handleSubmit}>
                     <input 
-                    type="search"
+                    type="textarea"
                     name="search"
                     placeholder="search"
                     onChange={handleChange}
                     value={searchTerms}
-                    className = "search-input"
+                    className="search-input"
                     ></input>
                     <button className="submit-btn">Submit</button>
                 </form>

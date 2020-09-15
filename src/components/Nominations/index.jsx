@@ -59,13 +59,38 @@ const NominationsComponent = () => {
                 </div>
                 <div className="results-box">
                     { nominations ? nominations.map((item,i) => {
-                    return  <div className="list-item" key={i}>
+                    return  <div className="list-item nominations-list-item" key={i}>
                                 <ul>
                                     <li className={"details-card-link"} onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
                                     {/* Complete details card IN PROGRESS */}
-                                    {/* <div className={details.length > 0 ? "details-card" : "hidden"}>
-                        
-                                        </div> */}
+                                    <div className={details.length > 0 ? "details-card" : "hidden"}>
+                                        <div className="close-button-box">
+                                            <button className="close-button" onClick={(() => setDetails(details.slice(0,0)))}>X</button>
+                                        </div>
+                                        <div className="details-box">
+
+                                            { details ? details.map((item,i) => {
+                                                return  <div className="list-item" key={i}>
+                                                <img className="movie-poster" src={item.Poster} alt="Movie Poster"/>
+                                                <h2>{item.Title} ({item.Year})</h2>
+                                                <p>Rated: {item.Rated}</p>
+                                                <p>Released: {item.Released}</p>
+                                                <p>Genre: {item.Genre}</p>
+                                                <p>Awards: {item.Awards}</p>
+                                                <p>Imdb Rating: {item.imdbRating}</p>
+                                                <p>Metascore: {item.Metascore}</p>
+                                                <p>Production: {item.Production}</p>
+                                                <p>Director: {item.Director}</p>
+                                                <p>Writer: {item.Writer}</p>
+                                                <p>Actors: {item.Actors}</p>
+                                                <p>Plot: {item.Plot}</p>
+                                            </div>
+                                            // potential loader : loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
+
+                                            }) : console.log("LOADING")
+                                            }
+                                            </div>
+                                    </div>
                                     <div className='remove-button'>
                                         <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
                                     </div>

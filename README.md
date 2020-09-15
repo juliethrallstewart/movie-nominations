@@ -13,10 +13,11 @@ https://loving-bassi-6b1411.netlify.app/
 - A users nomination list persists in local storage.
 - A user can only make more 5 nominations before having to remove a nomination to make a new selection.
 - Improved visual design which includes image of movie reel.
+- A user can click on a movie title in their nominated movies list and a movie info card is displayed.
 
 ## In Progress Features
-- A user can click on a movie title or info button in their nominated movies list and a movie info card is displayed.
-- Movie info card displays: Movie Poster, Plot, Actors, Director.
+- Improved movie card detail UX
+- Improved fonts
 - Mobile view displays Nominations section above the Search Results for improved UI.
 - Update CSS to SCSS.
 

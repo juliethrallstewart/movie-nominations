@@ -98,11 +98,12 @@ li {
 
 .search-input {
   width: 50vw;
-  height: 2.5em;
+  height: 2em;
   border-radius: 5px;
   border: 1px solid lightgray;
   /* font-family: 'Courgette', cursive; */
   font-family: 'Roboto', sans-serif;
+  margin-bottom: .1em;
 
 }
 

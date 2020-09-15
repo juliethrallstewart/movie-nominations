@@ -29,7 +29,7 @@ const SearchResultsComponent = () => {
         <>
             <div className='results-component search'>
                 <div className="results-header">
-                    <h2>Search Results</h2>
+                    <h3>Search Results</h3>
                 </div>
                 <div className="results-box">
 

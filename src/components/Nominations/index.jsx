@@ -55,7 +55,7 @@ const NominationsComponent = () => {
 
             <div className="results-component">
                 <div className="results-header">
-                    <h2>Nominations</h2>
+                    <h3>Nominations</h3>
                 </div>
                 <div className="results-box">
                     { nominations ? nominations.map((item,i) => {
@@ -68,22 +68,23 @@ const NominationsComponent = () => {
                                             <button className="close-button" onClick={(() => setDetails(details.slice(0,0)))}>X</button>
                                         </div>
                                         <div className="details-box">
-
                                             { details ? details.map((item,i) => {
                                                 return  <div className="list-item" key={i}>
-                                                <img className="movie-poster" src={item.Poster} alt="Movie Poster"/>
-                                                <h2>{item.Title} ({item.Year})</h2>
-                                                <p>Rated: {item.Rated}</p>
-                                                <p>Released: {item.Released}</p>
-                                                <p>Genre: {item.Genre}</p>
-                                                <p>Awards: {item.Awards}</p>
-                                                <p>Imdb Rating: {item.imdbRating}</p>
-                                                <p>Metascore: {item.Metascore}</p>
-                                                <p>Production: {item.Production}</p>
-                                                <p>Director: {item.Director}</p>
-                                                <p>Writer: {item.Writer}</p>
-                                                <p>Actors: {item.Actors}</p>
-                                                <p>Plot: {item.Plot}</p>
+                                                <div className="movie-poster-box">
+                                                    <img className="movie-poster" src={item.Poster} alt="Movie Poster"/>
+                                                    <h3>{item.Title} ({item.Year})</h3>
+                                                </div>
+                                                <p><span>Rated</span>: {item.Rated}</p>
+                                                <p><span>Released:</span> {item.Released}</p>
+                                                <p><span>Genre:</span> {item.Genre}</p>
+                                                <p><span>Awards:</span> {item.Awards}</p>
+                                                <p><span>Imdb Rating:</span> {item.imdbRating}</p>
+                                                <p><span>Metascore:</span> {item.Metascore}</p>
+                                                <p><span>Production:</span> {item.Production}</p>
+                                                <p><span>Director:</span> {item.Director}</p>
+                                                <p><span>Writer:</span> {item.Writer}</p>
+                                                <p><span>Actors:</span> {item.Actors}</p>
+                                                <p><span>Plot:</span> {item.Plot}</p>
                                             </div>
                                             // potential loader : loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
 

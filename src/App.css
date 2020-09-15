@@ -98,7 +98,7 @@ li {
 
 .search-input {
   width: 50vw;
-  height: 4vh;
+  height: 2.5em;
   border-radius: 5px;
   border: 1px solid lightgray;
   /* font-family: 'Courgette', cursive; */
@@ -107,9 +107,8 @@ li {
 }
 
 button {
-  height: 4vh;
+  height: 2em;
   color:#484848;
-  margin: .5em;
   border: 1px solid lightgray;
   border-radius: 5px;
   min-width: 90%;
@@ -127,6 +126,7 @@ button:disabled {
 .submit-btn {
   min-width: 0%;
   padding: 0 10px;
+  margin-left: .1em;
 }
 
 .body-results {
@@ -319,6 +319,8 @@ button:disabled {
   min-width: 100%;
   align-items: center;
   box-shadow: 0px 10px 10px -5px #484848;
+  padding: 5px;
+
 }
 
 .results-component {

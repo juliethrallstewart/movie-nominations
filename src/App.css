@@ -96,6 +96,12 @@ li {
   margin: 0 auto;
 }
 
+.gray-body {
+  background-color:gray;
+  /* z-index: 1; */
+
+}
+
 .search-input {
   width: 50vw;
   height: 2.5em;
@@ -202,13 +208,15 @@ button:disabled {
   z-index: 5;
   position: absolute;
   top: 100%;
-  left: 25%;
-  /* margin-left: -25vw; */
-  min-width: 50vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 75vw;
   min-height:40vh;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0px 10px 10px -5px #484848;
+  /* box-shadow: 0px 10px 10px -5px #484848; */
+  box-shadow: 0px 0px 10px #484848;
+
 }
 
 .close-button-box {
@@ -232,11 +240,11 @@ button:disabled {
   flex-direction: column;
   margin: 20px;
   border: 1px solid lightgray;
-
- 
+  padding: 1em;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen 
+  and (max-width: 768px) { 
 
   .App-header {
     flex-direction: column;
@@ -290,7 +298,7 @@ button:disabled {
   }
 
   .banner-box {
-    margin-left: -25vw;
+    top: 125%;
   }
 
   .banner-message {
@@ -305,7 +313,6 @@ button:disabled {
     min-height:100vh;
     background-color: white;
     margin: 0 auto;
-    position: none;
     top: 0%;
     left: 0%;
     margin-top: 0vh;

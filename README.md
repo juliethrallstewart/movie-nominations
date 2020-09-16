@@ -11,18 +11,15 @@ https://loving-bassi-6b1411.netlify.app/
 - A user can remove a nominated movie from their list of nominations.
 - When a nomination is removed from the nomination list the nominate button for that movie is enabled again in the search results.
 - A users nomination list persists in local storage.
-- A user can only make more 5 nominations before having to remove a nomination to make a new selection.
+- A user can only make 5 nominations before having to remove a nomination to make a new selection.
 - Improved visual design which includes image of movie reel.
 - A user can click on a movie title in their nominated movies list and a movie info card is displayed.
 
 ## In Progress Features
-- Improved movie card detail UX
-- Improved fonts
-- Mobile view displays Nominations section above the Search Results for improved UI.
+- A user can share their nominations with their FB friends.
 - Update CSS to SCSS.
 
 ## Future Features
-- A user can share their nominations with their FB friends.
 - A user can clear all their nominations at once.
 
 ## Bugs

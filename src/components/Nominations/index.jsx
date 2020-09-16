@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
 
@@ -49,6 +49,25 @@ const NominationsComponent = () => {
         })
         .catch(err => console.log(err))
     }, [nominations, apiSearch, setResults])
+
+    const detailsRef = useRef()
+
+    const handleClick = e => {
+        if (detailsRef.current.contains(e.target)) {
+          // inside click
+          return
+        }
+        setDetails(details.slice(0,0))
+      };
+
+    useEffect(() => {
+        // add when mounted
+        document.addEventListener("mousedown", handleClick);
+        // return function to be called when unmounted
+        return () => {
+          document.removeEventListener("mousedown", handleClick);
+        };
+      }, []);
   
     return (
         <>
@@ -63,7 +82,7 @@ const NominationsComponent = () => {
                                 <ul>
                                     <li className={"details-card-link"} onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
                                     {/* Complete details card IN PROGRESS */}
-                                    <div className={details.length > 0 ? "details-card" : "hidden"}>
+                                    <div ref={detailsRef} className={details.length > 0 ? "details-card" : "hidden"}>
                                         <div className="close-button-box">
                                             <button className="close-button" onClick={(() => setDetails(details.slice(0,0)))}>X</button>
                                         </div>

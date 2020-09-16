@@ -1,12 +1,30 @@
-import React, {useContext} from "react";
+import React, {useContext, useRef, useEffect} from "react";
 import NominationsContext from '../../contexts/NominationsContext'
-
 
 const Banner = () => {
     const {counter, bannerStatus, setBannerStatus} = useContext(NominationsContext)
 
+    const bannerRef = useRef()
+
+    const handleClick = e => {
+        if (bannerRef.current.contains(e.target)) {
+          // inside click
+          setBannerStatus(!bannerStatus)
+        }
+        setBannerStatus(!bannerStatus)
+      };
+
+    useEffect(() => {
+        // add when mounted
+        document.addEventListener("mousedown", handleClick);
+        // return function to be called when unmounted
+        return () => {
+          document.removeEventListener("mousedown", handleClick);
+        };
+      }, []);
+
     return ( 
-        <div className={counter > 3 && bannerStatus === true ? "banner-box" : "hidden"}>
+        <div ref={bannerRef} id="banner-box" className={counter > 3 && !bannerStatus ? "banner-box" : "hidden"}>
             <div className="banner-content">
                 <div className="close-button-box">
                     <button className="close-button" onClick={(() => setBannerStatus(!bannerStatus))}>X</button>

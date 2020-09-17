@@ -118,8 +118,8 @@ button {
   color:#484848;
   border: 1px solid lightgray;
   border-radius: 5px;
-  min-width: 90%;
-  font-size: 1em;
+  max-width: 100%;
+  font-size: .75em;
 }
 
 button:hover:enabled {
@@ -316,8 +316,6 @@ button:disabled {
     margin: 0 auto;
     top: 75%;
     left: 0%;
-    /* margin-top: 0vh;
-    margin-left: 0vw; */
     padding: 10px;
     border-radius: 0px;
   }

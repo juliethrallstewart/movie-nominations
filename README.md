@@ -16,11 +16,13 @@ https://loving-bassi-6b1411.netlify.app/
 - A user can click on a movie title in their nominated movies list and a movie info card is displayed.
 
 ## In Progress Features
-- A user can share their nominations with their FB friends.
+- A user can share "The Shoppies" website with their friends.
 - Update CSS to SCSS.
 
 ## Future Features
 - A user can clear all their nominations at once.
+- A user can share their nominations with their friends.
+
 
 ## Bugs
 - The users last search results are saved in local storage but bug when accessing after leaving website and returning.

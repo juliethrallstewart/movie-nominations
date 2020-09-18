@@ -53,9 +53,11 @@ const NominationsComponent = () => {
     const detailsRef = useRef()
 
     const handleClick = e => {
-        if (detailsRef.current.contains(e.target)) {
+        if (detailsRef.current) {
+            if (detailsRef.current.contains(e.target)) {
           // inside click
-          return
+            return
+         }
         }
         setDetails(details.slice(0,0))
       };

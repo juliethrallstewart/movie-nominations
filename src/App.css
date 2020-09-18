@@ -244,6 +244,17 @@ button:disabled {
   padding: 1em;
 }
 
+.share-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.share-container {
+  margin: .5em;
+}
+
 @media screen 
   and (max-width: 768px) { 
 

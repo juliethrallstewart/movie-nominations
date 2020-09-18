@@ -7,6 +7,7 @@ import NominationsComponent from '../src/components/Nominations'
 import SearchResultsComponent from '../src/components/SearchResults'
 import Banner from '../src/components/Banner'
 import Header from '../src/components/Header'
+import Share from '../src/components/Share'
 import Footer from '../src/components/Footer'
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
         <NominationsComponent />
         </div>
       </div>
+      <Share />
       <Footer />
     </div>
     </NominationsContext.Provider>

@@ -152,9 +152,9 @@ button:disabled {
 
 }
 
-/* .nominations-list-item:hover {
+.nominations-list-item:hover {
   background-color: #F5F5F5;
-} */
+}
 
 .details-card {
   display: block;

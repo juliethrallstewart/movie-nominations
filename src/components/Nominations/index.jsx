@@ -1,6 +1,8 @@
 import React, { useEffect, useContext, useRef } from "react";
 import axios from "axios";
 import NominationsContext from '../../contexts/NominationsContext'
+import { AiFillStar } from 'react-icons/ai';
+
 
 const NominationsComponent = () => {
 
@@ -81,8 +83,8 @@ const NominationsComponent = () => {
                 <div className="results-box">
                     { nominations ? nominations.map((item,i) => {
                     return  <div className="list-item nominations-list-item" key={i}>
-                                <ul>
-                                    <li className={"details-card-link"} onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
+                                <ul className={"details-card-link"}>
+                                    <li onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
                                     {/* Complete details card IN PROGRESS */}
                                     <div ref={detailsRef} className={details.length > 0 ? "details-card" : "hidden"}>
                                         <div className="close-button-box">

@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import { AiFillStar } from 'react-icons/ai';
+
 // import Loader from 'react-loader-spinner'
 
 
@@ -27,7 +29,7 @@ const SearchResultsComponent = () => {
 
     return (
         <>
-            <div className='results-component search'>
+            <div className='results-component'>
                 <div className="results-header">
                     <h3>Search Results</h3>
                 </div>
@@ -36,11 +38,12 @@ const SearchResultsComponent = () => {
                     { searchResults ? searchResults.map((item,i) => {
                         return  <div className="list-item" key={i}>
                         <ul>
-                        <li>{item.Title} ({item.Year})</li>
-                            <li className="button-line-item"><div className='nominate-button'>
-                            <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate"}</button>
-                            </div></li>
-                        </ul>
+                            <div className="star-icon"><AiFillStar color={'gold'} size={'1em'}/></div>
+                            <li>{item.Title} ({item.Year})</li>
+                            <li className='nominate-line-item-btn'>
+                                <button className='nominate-btn' disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate"}</button>
+                            </li>
+                        </ul>                  
                     </div>
     // potential loader : loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
 

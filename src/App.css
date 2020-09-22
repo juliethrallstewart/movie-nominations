@@ -55,26 +55,8 @@ a {
   color: white;
 }
 
-p {
-  color: #323232
-}
-
-span {
-  color:#343434;
-}
-
 li {
-  color: #323232;
-  max-width: 65%; 
-  padding-left: 1em;
-}
-
-.remove-btn {
-  width: 6em;
-}
-
-.nominate-btn {
-    width: 6em;
+  color:#484848;
 }
 
 .logo-text {
@@ -131,16 +113,12 @@ li {
 
 }
 
-.star-icon {
-  margin-left: -.5em;
-}
-
 button {
   height: 2em;
   color:#484848;
   border: 1px solid lightgray;
   border-radius: 5px;
-  /* max-width: 100%; */
+  max-width: 100%;
   font-size: .75em;
 }
 
@@ -166,6 +144,12 @@ button:disabled {
 
 .details-card-link {
   text-decoration: underline;
+}
+
+.nominations-list-item {
+  background-color: white;
+  text-align: left;
+
 }
 
 .nominations-list-item:hover {
@@ -316,14 +300,14 @@ button:disabled {
   }
 
   .list-item ul{
-    min-width: 65vw; 
+    max-width: 100vw; 
      
   }
-
-  .star-icon {
-    margin-left: -1em;
-  }
    
+  li {
+    max-width: 100vw;
+    
+  }
 
   .results-component {
     min-width: 90vw;
@@ -403,14 +387,17 @@ button:disabled {
 .list-item ul{
   display:flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  margin: 5px 0px 5px 0px;
-  list-style-type: none;
+  margin: 5px 20px 5px 0;
+  list-style-type: '\2b50';
   text-align: left;
-  min-width: 100%;
-  
+}
+
+li {
+  max-width: 60%; 
+  padding-left: 1em;
 }
 
 .button-line-item {

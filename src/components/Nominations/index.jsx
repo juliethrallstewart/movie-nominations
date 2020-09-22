@@ -83,9 +83,9 @@ const NominationsComponent = () => {
                 <div className="results-box">
                     { nominations ? nominations.map((item,i) => {
                     return  <div className="list-item nominations-list-item" key={i}>
-                                <ul className={"details-card-link"}>
+                                <ul className="details-card-link">
+                                    <div className='star-icon'><AiFillStar color={'gold'} size={'1em'}/></div>
                                     <li onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
-                                    {/* Complete details card IN PROGRESS */}
                                     <div ref={detailsRef} className={details.length > 0 ? "details-card" : "hidden"}>
                                         <div className="close-button-box">
                                             <button className="close-button" onClick={(() => setDetails(details.slice(0,0)))}>X</button>
@@ -115,9 +115,9 @@ const NominationsComponent = () => {
                                             }
                                             </div>
                                     </div>
-                                    <div className='remove-button'>
-                                        <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
-                                    </div>
+                                    <li className='remove-line-item-btn'>
+                                        <button onClick={(e) => handleDeleteSubmit(e,item)} className="remove-btn">Remove</button>
+                                    </li>
                                 </ul>
                             </div>
         

@@ -84,7 +84,7 @@ const NominationsComponent = () => {
                     { nominations ? nominations.map((item,i) => {
                     return  <div className="list-item nominations-list-item" key={i}>
                                 <ul className="details-card-link">
-                                    <div className='star-icon'><AiFillStar color={'gold'} size={'1em'}/></div>
+                                    <div className='star-icon'><AiFillStar color={'gold'} size={'1.5em'}/></div>
                                     <div className="result-title">
                                     <li onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
                                     </div>

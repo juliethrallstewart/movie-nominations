@@ -38,7 +38,7 @@ const SearchResultsComponent = () => {
                     { searchResults ? searchResults.map((item,i) => {
                         return  <div className="list-item" key={i}>
                         <ul>
-                            <div className="star-icon"><AiFillStar color={'gold'} size={'1em'}/></div>
+                            <div className="star-icon"><AiFillStar color={'gold'} size={'1.5em'}/></div>
                             <div className="result-title">
                             <li>{item.Title} ({item.Year})</li>
                             </div>

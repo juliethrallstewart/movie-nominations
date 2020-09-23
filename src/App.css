@@ -55,14 +55,6 @@ a {
   color: white;
 }
 
-p {
-  color: #323232
-}
-
-span {
-  color:#343434;
-}
-
 li {
   color: #323232;
 }
@@ -169,6 +161,12 @@ button:disabled {
 
 .details-card-link {
   text-decoration: underline;
+}
+
+.nominations-list-item {
+  background-color: white;
+  text-align: left;
+
 }
 
 .nominations-list-item:hover {
@@ -415,8 +413,8 @@ button:disabled {
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 5px 0px 5px 0px;
-  list-style-type: none;
+  margin: 5px 20px 5px 0;
+  list-style-type: '\2b50';
   text-align: left;
   min-width: 100%;
   padding: 0;

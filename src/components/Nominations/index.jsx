@@ -117,9 +117,9 @@ const NominationsComponent = () => {
                                             }
                                             </div>
                                     </div>
-                                    <li className='remove-line-item-btn'>
-                                        <button onClick={(e) => handleDeleteSubmit(e,item)} className="remove-btn">Remove</button>
-                                    </li>
+                                    <div className='remove-button'>
+                                        <button onClick={(e) => handleDeleteSubmit(e,item)} className="delete-btn">Remove</button>
+                                    </div>
                                 </ul>
                             </div>
         

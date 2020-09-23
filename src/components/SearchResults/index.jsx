@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import { AiFillStar } from 'react-icons/ai';
-
 // import Loader from 'react-loader-spinner'
 
 
@@ -29,7 +27,7 @@ const SearchResultsComponent = () => {
 
     return (
         <>
-            <div className='results-component'>
+            <div className='results-component search'>
                 <div className="results-header">
                     <h3>Search Results</h3>
                 </div>

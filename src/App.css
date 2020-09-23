@@ -56,7 +56,15 @@ a {
 }
 
 li {
-  color:#484848;
+  color: #323232;
+}
+
+.remove-btn {
+  width: 6em;
+}
+
+.nominate-btn {
+    width: 6em;
 }
 
 .logo-text {
@@ -118,7 +126,6 @@ button {
   color:#484848;
   border: 1px solid lightgray;
   border-radius: 5px;
-  max-width: 100%;
   font-size: .75em;
 }
 
@@ -140,6 +147,16 @@ button:disabled {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+}
+
+.result-title {
+  min-width: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  
 }
 
 .details-card-link {
@@ -300,13 +317,17 @@ button:disabled {
   }
 
   .list-item ul{
-    max-width: 100vw; 
-     
+    min-width: 65vw; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;  
   }
-   
-  li {
-    max-width: 100vw;
-    
+
+  .result-title {
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   .results-component {
@@ -382,22 +403,22 @@ button:disabled {
 
 .results-box {
   margin-top: 75px;
+  padding: 0 10px;
+
 }
 
 .list-item ul{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   margin: 5px 20px 5px 0;
   list-style-type: '\2b50';
   text-align: left;
-}
-
-li {
-  max-width: 60%; 
-  padding-left: 1em;
+  min-width: 100%;
+  padding: 0;
+  
 }
 
 .button-line-item {

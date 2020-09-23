@@ -36,11 +36,14 @@ const SearchResultsComponent = () => {
                     { searchResults ? searchResults.map((item,i) => {
                         return  <div className="list-item" key={i}>
                         <ul>
-                        <li>{item.Title} ({item.Year})</li>
-                            <li className="button-line-item"><div className='nominate-button'>
-                            <button disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate"}</button>
-                            </div></li>
-                        </ul>
+                            <div className="star-icon"><AiFillStar color={'gold'} size={'1em'}/></div>
+                            <div className="result-title">
+                            <li>{item.Title} ({item.Year})</li>
+                            </div>
+                            <li className='nominate-line-item-btn'>
+                                <button className='nominate-btn' disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate"}</button>
+                            </li>
+                        </ul>                  
                     </div>
     // potential loader : loading ? <Loader type="Oval" color="#00BFFF" height={80} width={80} /> : searchResults
 

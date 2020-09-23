@@ -65,8 +65,6 @@ span {
 
 li {
   color: #323232;
-  max-width: 65%; 
-  padding-left: 1em;
 }
 
 .remove-btn {
@@ -131,16 +129,11 @@ li {
 
 }
 
-.star-icon {
-  margin-left: -.5em;
-}
-
 button {
   height: 2em;
   color:#484848;
   border: 1px solid lightgray;
   border-radius: 5px;
-  /* max-width: 100%; */
   font-size: .75em;
 }
 
@@ -162,6 +155,16 @@ button:disabled {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+}
+
+.result-title {
+  min-width: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  
 }
 
 .details-card-link {
@@ -317,13 +320,17 @@ button:disabled {
 
   .list-item ul{
     min-width: 65vw; 
-     
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;  
   }
 
-  .star-icon {
-    margin-left: -1em;
+  .result-title {
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
-   
 
   .results-component {
     min-width: 90vw;
@@ -398,18 +405,21 @@ button:disabled {
 
 .results-box {
   margin-top: 75px;
+  padding: 0 10px;
+
 }
 
 .list-item ul{
   display:flex;
   flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   margin: 5px 0px 5px 0px;
   list-style-type: none;
   text-align: left;
   min-width: 100%;
+  padding: 0;
   
 }
 

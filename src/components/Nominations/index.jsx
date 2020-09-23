@@ -85,7 +85,9 @@ const NominationsComponent = () => {
                     return  <div className="list-item nominations-list-item" key={i}>
                                 <ul className="details-card-link">
                                     <div className='star-icon'><AiFillStar color={'gold'} size={'1em'}/></div>
+                                    <div className="result-title">
                                     <li onClick={(e) => handleMovieDetailSubmit(e,item.Title)}>{item.Title} ({item.Year})</li>
+                                    </div>
                                     <div ref={detailsRef} className={details.length > 0 ? "details-card" : "hidden"}>
                                         <div className="close-button-box">
                                             <button className="close-button" onClick={(() => setDetails(details.slice(0,0)))}>X</button>

@@ -39,7 +39,9 @@ const SearchResultsComponent = () => {
                         return  <div className="list-item" key={i}>
                         <ul>
                             <div className="star-icon"><AiFillStar color={'gold'} size={'1em'}/></div>
+                            <div className="result-title">
                             <li>{item.Title} ({item.Year})</li>
+                            </div>
                             <li className='nominate-line-item-btn'>
                                 <button className='nominate-btn' disabled={item.nominated} onClick={(e) => handleNominationSubmit(e,item)}>{item.nominated ? "Nominated" : "Nominate"}</button>
                             </li>

@@ -24,7 +24,7 @@ const Banner = () => {
       }, []);
 
     return ( 
-        <div ref={bannerRef} id="banner-box" className={counter > 3 && !bannerStatus ? "banner-box" : "hidden"}>
+        <div ref={bannerRef} id="banner-box" className={counter > 4 && !bannerStatus ? "banner-box" : "hidden"}>
             <div className="banner-content">
                 <div className="close-button-box">
                     <button className="close-button" onClick={(() => setBannerStatus(!bannerStatus))}>X</button>

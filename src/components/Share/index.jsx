@@ -2,7 +2,6 @@ import React from "react";
 import movieReel from '../../assets/anika-mikkelson-dWYjy9zIiF8-unsplash.jpg'
 
 import {
-    EmailShareButton,
     FacebookShareButton,
     PinterestShareButton,
     TwitterShareButton,
@@ -10,7 +9,6 @@ import {
   } from "react-share";
 
   import {
-    EmailIcon,
     FacebookIcon,
     PinterestIcon,
     TwitterIcon,
@@ -61,16 +59,6 @@ const ShareComponent = () => {
                     <WhatsappIcon size={32} round />
                 </WhatsappShareButton>
             </div>
-            {/* <div className="share-container">
-                <EmailShareButton
-                    url={shareUrl}
-                    subject={title}
-                    body="body"
-                    className="share-button"
-                >
-                    <EmailIcon size={32} round />
-                </EmailShareButton>
-            </div> */}
         </div>
     )
 

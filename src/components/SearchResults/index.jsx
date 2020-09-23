@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import NominationsContext from '../../contexts/NominationsContext'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import { AiFillStar } from 'react-icons/ai';
+
 // import Loader from 'react-loader-spinner'
 
 

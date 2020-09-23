@@ -45,7 +45,7 @@ h3 {
 
 }
 
-a, li, p, button {
+a, li, p {
   /* font-family: 'Courgette', cursive; */
   font-family: 'Roboto', sans-serif;
 }
@@ -64,7 +64,8 @@ li {
 }
 
 .nominate-btn {
-    width: 6em;
+    width: 7em;
+    padding: 0 5px;
 }
 
 .logo-text {
@@ -127,6 +128,9 @@ button {
   border: 1px solid lightgray;
   border-radius: 5px;
   font-size: .75em;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 button:hover:enabled {
